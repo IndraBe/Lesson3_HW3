@@ -4,26 +4,34 @@ namespace HW3
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args)         //call a method
         {
-            Phone phone = new Phone();
+            Phone newObj1 = new Phone();          //creating object
 
-            Console.WriteLine("Nosauciet telefona marku");
+            Console.WriteLine("Nosauciet telefona marku:");
 
-            string phoneBrand = Console.ReadLine();
+            newObj1.Brand = Console.ReadLine();
+
+
+            Console.WriteLine("Nosauciet telefona modeli:");
+
+            newObj1.Model = Console.ReadLine();
+
+
+            Console.WriteLine("Lūdzu, norādiet katrā rindā telefona garumu, platumu un augstumu:");
+
+            newObj1.LengthSize = double.Parse(Console.ReadLine());
+            newObj1.WidthSize = double.Parse(Console.ReadLine());
+            newObj1.HeightSize = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Jūs izvēlējāties: " + newObj1.Brand + " " + newObj1.Model + " / " + newObj1.LengthSize + " / " + newObj1.WidthSize + " / " + newObj1.HeightSize);
             
-            Console.WriteLine(phoneBrand);
-            //phone.Brand = "IPhone";
-            //phone.Model = "Pro";
-            //phone.LengthSize = 15;
-            //phone.WidthSize = 8;
-            //phone.HeightSize = 2;
+            string makeCall = newObj1.Call();
+            Console.WriteLine(makeCall);
 
-            //string getCall = phone.Call();
-            //Console.WriteLine(getCall);
+            string sendSMS = newObj1.SMS();
+            Console.WriteLine(sendSMS);
 
-            //string sms = phone.sendSMS();
-            //Console.WriteLine(sms);
         }
     }
 }

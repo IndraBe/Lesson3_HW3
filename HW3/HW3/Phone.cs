@@ -8,27 +8,27 @@ namespace HW3
 {
     public class Phone
     {
-        public string Brand { get; set; }
+        public string Brand { get; set; }   //field
+        
+        public string Model { get; set; }   //field
 
-        public string Model { get; set; }
+        public double LengthSize { get; set; }  //field
 
-        public double LengthSize { get; set; }
+        public double WidthSize { get; set; }   //field
 
-        public double WidthSize { get; set; }
+        public double HeightSize { get; set; }  //field
 
-        public double HeightSize { get; set; }
-
-        public string Call()
+        public string Call()                  //method
         {
-            string getCall = "Contact us by calling";
-
-            return getCall;
+            string makeCall = "Piezvaniet, ja rodas kāds jautājums.";
+            //string getCall = "Contact us by calling";
+            return makeCall;
         }
-        public string sendSMS()
+        public string SMS()               //method
         {
-            string sms = "Contact us sending SMS";
-
-            return sms;
+            string sendSMS = "Vai arī atsūtiet SMS.";
+            //string sms = "Contact us sending SMS";
+            return sendSMS;
         }
         
     }
