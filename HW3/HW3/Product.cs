@@ -9,7 +9,7 @@ namespace HW3
     class Product
     {
 
-        public Product(double productLength, double productWidth, int productWeight)       //konstruktors
+        public Product(double productLength, double productWidth, double productWeight)       //konstruktors
         {
             Length = productLength;
             Width = productWidth;
@@ -22,16 +22,18 @@ namespace HW3
 
         public double Weight { get; }   //field
 
-        public string Create()                  //method
+        public string Create()             //method
         {
             string createProduct = "Jauns produkts ir izveidots.";
             return createProduct;
         }
-
-        //public string Show()               //method
-        //{
-        //    string showProduct = "Product length" ;
-        //    return showProduct;
-        //}
+        public string Show(double productLength, double productWidth, double productWeight)               //method
+        {
+            string showProduct = "Izveidotās preces parametri ir: " + productLength 
+                                                              + "cm, " + productWidth 
+                                                              + "cm, " + productWeight 
+                                                              + "kg.";
+            return showProduct;
+        }
     }
 }
